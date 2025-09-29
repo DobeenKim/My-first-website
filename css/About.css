@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none; 
+    color:black;
+}
+
+body{width: 100%;
+    background: #F7F3F0;
+height: 100vh;
+}
+
+
+
+
+/* skill */
+.skill{width: 100%;}
+h1{
+    font-size: 4rem;
+    padding-bottom: 45px;
+}
+.skill .wrap{
+    width: 77%;
+    margin: 0 auto;
+    padding: 200px 0 200px 0;
+}
+
+.skill-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.skill-list p{
+    font-size: 3rem;
+    border-bottom: 1px solid black;
+    padding: 24px;
+}
+
+
+
+
+/* favorite  */
+.favorite{width: 100%;}
+
+.favorite .wrap{
+    width: 77%;
+    margin: 0 auto;
+}
+
+p.text{
+    font-size: 4rem;
+    padding-bottom: 24px;
+    font-weight: 500;
+}
+
+.favorite-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "valheim totoro mushromms"
+    "dog cooking baking";
+    gap:2vw;
+}
+
+.valheim{grid-area: valheim;}
+.totoro{grid-area: totoro;}
+.mushrooms{grid-area: mushromms;}
+.dog{grid-area: dog;}
+.cooking{grid-area: cooking;}
+.baking{grid-area: baking;}
+.favorite-list img{width: 100%;
+}
+
+
+
+
+/* width:768px */
+@media (max-width:768px){
+    .submit{width: 16%;}
+    h1{
+        font-size: 3.7rem;
+        padding-bottom: 45px;
+        text-align: center;
+    }
+    .skill-list p{font-size: 2.7rem;}
+    .favorite-list{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "valheim totoro"
+    "mushromms dog"
+    " cooking baking";
+    gap:2vw;
+    }
+}
+
+
+
+/* width:375px */
+@media (max-width:375px){
+    h1{font-size: 1.9rem;
+        padding: 20px 0 30px 0;
+    }
+    .skill .wrap{
+        padding-top: 0;
+        padding-bottom: 100px;
+    }
+    .skill-list p{font-size: 1rem;}
+    .favorite-list{
+        display: inline;
+    text-align: center;
+    }
+    .favorite-list img{width: 80%;
+    }
+}

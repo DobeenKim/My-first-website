@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+        <header class="header">
+            <div class="icon"><img src="../img-box/menu-burger-horizontal-svgrepo-com.svg" alt="" width="45px" height="45px"></div>
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="contact.html"class="active">Contact</a></li>
+            </ul>
+        </header>
+        <section class="main">
+            <div class="name">
+                <p class="first-name">CONTACT</p>
+                <p class="last-name">ME!</p>
+                <p class="last-name">김도빈</p>
+            </div>
+            <div class="img"><img src="../img-box/img1.png" alt=""></div>
+        </section>
+        <form action="mailto:Dobeen@gmail.com" method="POST" enctype="text/plain" class="user-information">
+            <div class="wrap">
+                <fieldset>
+                    <legend>What's your name?</legend>
+                    <div class="user-input-first">
+                        <label for="first-name">First name</label>
+                        <input type="text" name="first-name" id="first-name" placeholder="Enter your first name!"required>
+                    </div>
+                    <div class="user-input">
+                        <label for="family-name">Email</label>
+                        <input type="text" name="email-address" id="email-address" placeholder="Enter your Email"required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Feedback & Suggestions!</legend>
+                    <div class="user-input-feedback">
+                        <label for="description">Share your thoughts!</label>
+                        <textarea name="description" id="description"></textarea>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="user-input-question">
+                        <label for="question">Did you like my website?</label>
+                        <select name="answer" id="answer">
+                            <option value="yes">Yes!</option>
+                            <option value="maybe">Maybe?</option>
+                            <option value="no">No..</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <h1 type="submit" class="submit">Send</h1>
+            </div>
+        </form>
+        <footer>
+            <div class="contact-box">
+                <p class="contact">CONTACT</p>
+                <p class="email"><a href="mailto:dobeen@email.com">Email</a></p>
+                <p class="linkedin"><a href="https://www.linkedin.com/in/dobin-kim-3371431a0/">linkedin</a></p>
+                <p class="button"><a href="#top">Go to top</a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

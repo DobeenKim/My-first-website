@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none; 
+    
+    color:black;
+}
+body{
+    width: 100%;
+    background: #F7F3F0; 
+}
+
+
+
+
+/* header */
+.active{
+    color: rgb(238, 136, 136);
+    text-decoration: underline;
+}
+
+header{
+    width: 100%;
+    background:#f4ece6;
+    margin-bottom: 96px;
+}
+
+.icon{display: none;}
+
+.menu{
+    width: 30%; 
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 2% 0 2% 8.2%;
+}
+.header .menu li{
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.875rem;
+}
+
+.header .menu li a:hover{
+color: rgb(238, 136, 136);
+}
+
+
+/* menu - underline */
+.menu li a{position: relative;}
+.menu li a::after{
+    content: ''; 
+    width: 0%; 
+    height: 3px; 
+    position: absolute; 
+    background: rgb(238, 136, 136); 
+    left: 50%; 
+    top: 35px;
+    transform: translateX(-50%);
+    transition: all 0.5s;
+}
+
+.menu li a:hover:after{width: 100%;}
+
+
+
+/* main */
+.main{
+    margin: 0 auto;
+    width: 79%;
+    display: flex;
+    justify-content: space-between;
+}
+.main .name{
+    font-size:  8.75rem;
+    width: 100%;
+    padding-top: 57px;
+}
+.main .img{
+    width: 100%;
+    position: relative;
+}
+.main .img img{width: 100%;}
+
+
+
+/* animation */
+@keyframes mask{
+    0%{height: 90%;}
+}
+.main div.img:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 0%;
+    background:#F7F3F0;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    animation-name: mask;
+    animation-duration: 1.6s;
+}
+
+.main .name p:nth-child(1){animation-name: textAni; animation-duration: 1.5s;}
+.main .name p:nth-child(2){animation-name: textAni; animation-duration: 1.7s;}
+.main .name p:nth-child(3){animation-name: textAni; animation-duration: 2s;}
+
+@keyframes textAni{
+    0%{transform: translateY(100px); opacity: 0;}
+}
+
+
+
+/* footer */
+footer{
+    width: 100%; 
+    background:#f4ece6; 
+    margin-top: 185px;
+}
+
+.contact-box{
+    margin: 0 auto;
+    width: 77%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px auto 150px;
+    grid-template-areas: 
+    "contact contact"
+    "email phone-number"
+    "top top";
+}
+
+.contact{
+    grid-area:contact ; 
+    font-size: 5rem;
+    border-bottom: 1px solid black;
+    padding-top: 77px;
+}
+.email{
+    grid-area: email; 
+    text-align: center;
+    font-size: 2rem;
+    padding: 50px;
+}
+.linkedin{
+    grid-area:phone-number; 
+    text-align: center;
+    font-size: 2rem;
+    padding: 50px;
+}
+.button{
+    grid-area:top ; 
+    font-size: 2rem;
+    text-align: center;
+    border-top: 1px solid black;
+    padding-top: 60px;
+}
+
+.button a{color: rgb(238, 136, 136);}
+
+
+
+/* width:768px */
+@media (max-width:768px){
+    .header{
+        padding: 30px;
+        background:#f4ece6;
+        transition: linear 0.5s;
+        margin-bottom: 0;
+        
+    }
+    .icon{
+        display: block;
+        cursor: pointer; 
+    }
+    .header{width: unset;}
+    .header:hover .menu{display: block;}
+    .header .menu{
+        display: inline-block;
+        background:#f4ece6;
+        padding: 30px;
+        display: none;
+    }
+    .header .menu li{
+        padding: 10px 0 10px 20px; 
+        transition: linear 0.4s;
+        text-align: center;
+    }
+    
+    .main{display: inline;}
+    .main .name {
+        font-size: 7rem;
+        text-align: center;
+        padding: 57px;
+    }
+    .main .name p:nth-child(3){
+        display: none;
+    }
+    .main .img{
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+    .contact{text-align: center;}
+}
+
+
+/* width:375px */
+@media (max-width:375px){
+    header{
+    margin-bottom: 20px;
+    padding: 15px;
+    }
+    .main{display: inline;}
+    .main .img{text-align: center;}
+    .main .img img{width: 80%;}
+    .main .name{
+        font-size: 1.75rem;
+        padding-top: 0;
+        display: flex;
+        gap: 3%;
+        padding: 20px 0 20px 40px;
+    }
+    .main .name p:nth-child(3){
+        display: none;
+    }
+
+    /* contact */
+    .contact{
+        font-size: 2rem; 
+        padding: 40px; 
+        text-align: center;
+    }
+    .linkedin, .eamil{padding: 40px;}
+    .contact-box{
+        grid-template-rows: 100px auto 150px;
+        display: inline;
+    }
+    .button{
+        padding: 40px;
+        font-size: 1.5rem;
+    }
+    footer{margin-top: 30px;}
+    }
