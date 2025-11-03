@@ -4,29 +4,27 @@
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none; 
-    
     color:black;
 }
-body{
+
+body {
     width: 100%;
     background: #F7F3F0; 
 }
 
-
-
-/* user-information */
-
-fieldset{
+fieldset {
     margin-bottom: 45px;
     text-align: center;
     height: 100%;
 }
 
-fieldset:nth-child(3){margin-top: 4px;}
+fieldset:nth-child(3){
+    margin-top: 4px;
+}
 
-.user-information{
+.user-information {
     background-image:url(../img-box/background-img3.JPG);
     background-repeat: repeat;
     margin-top: 250px;
@@ -34,42 +32,45 @@ fieldset:nth-child(3){margin-top: 4px;}
     height: 100%;
 }
 
-.user-input-feedback{
+.user-input-feedback {
     width: 50%; 
     margin: 0 auto;
     margin-bottom: 20px;
     height: 100%;
 }
 
-form .wrap{
+form .wrap {
     height: 880px; 
     display: grid; 
     grid-template-rows: 1fr 1fr 1fr;
     padding: 40px;
 }
 
-label{font-size: 1.5rem;}
-.user-input-question{
+label {
+    font-size: 1.5rem;
+}
+
+.user-input-question {
     padding: 20px; 
     display:inline-grid;
 }
 
-.user-input{
+.user-input {
     padding-top: 20px;
 }
 
-textarea{
+textarea {
     width: 100%;
     height: 200px;
     margin-top: 30px;
 }
 
-legend{
+legend {
     font-size: 3rem; 
     padding-bottom: 25px;
 }
 
-.submit{
+.submit {
     background: #f3f3f3;;
     border: 1px solid;
     border-radius:35px ;
@@ -83,18 +84,17 @@ legend{
     font-weight: 600;
 }
 
+.submit:hover {
+    color: rgb(238, 136, 136);
+}
 
-.submit:hover{color: rgb(238, 136, 136);}
-
-
-/* footer */
-footer{
+footer {
     width: 100%; 
     background:#f4ece6; 
     margin-top: 185px;
 }
 
-.contact-box{
+.contact-box {
     margin: 0 auto;
     width: 77%;
     display: grid;
@@ -106,28 +106,28 @@ footer{
     "top top";
 }
 
-.contact{
+.contact {
     grid-area:contact ; 
     font-size: 5rem;
     border-bottom: 1px solid black;
     padding-top: 77px;
 }
 
-.email{
+.email {
     grid-area: email; 
     text-align: center;
     font-size: 2rem;
     padding: 50px;
 }
 
-.linkedin{
+.linkedin {
     grid-area:phone-number; 
     text-align: center;
     font-size: 2rem;
     padding: 50px;
 }
 
-.button{
+.button {
     grid-area:top ; 
     font-size: 2rem;
     text-align: center;
@@ -135,36 +135,49 @@ footer{
     padding-top: 60px;
 }
 
-.button a{color: rgb(238, 136, 136);}
-
-
-
-
+.button a {
+    color: rgb(238, 136, 136);
+}
 
 /* width:768px */
 @media (max-width:768px){
     .submit{width: 16%;}
 }
 
-
-
-
 /* width:375px */
 @media (max-width:375px){
-    /* user-information */
     form .wrap{
-        height: 1107px; 
-        width: auto; 
-        gap: 2%;
+    height: 1107px; 
+    width: auto; 
+    gap: 2%;
     }
-    .user-input-feedback {width: 100%;}
-    .user-input-first{
+
+    .user-input-feedback {
+        width: 100%;
+    }
+
+    .user-input-first {
         display: inline-grid;
         padding-bottom: 15px;
     }
-    .user-input{display: inline-grid;}
-    textarea {width: 85%;}
-    legend {font-size: 2rem;}
-    .submit {width: 48%;}
-    .user-information{margin-top: 100px;}
+
+    .user-input {
+        display: inline-grid;
+    }
+
+    textarea {
+        width: 85%;
+    }
+
+    legend {
+        font-size: 2rem;
+    }
+
+    .submit {
+        width: 48%;
+    }
+
+    .user-information {
+        margin-top: 100px;
+    }
 }
