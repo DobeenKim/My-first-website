@@ -120,8 +120,8 @@ p.text {
     }
 }
 
-/* width:375px */
-@media (max-width:375px){
+/* width:390px */
+@media (max-width:390px){
     h1 {
         font-size: 1.9rem;
         padding: 20px 0 30px 0;
